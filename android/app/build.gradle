@@ -1,6 +1,7 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+apply plugin: "com.google.gms.google-services"
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -114,6 +115,25 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
+    
+    // dependency for the Firebase SDK for Google Analytics
+    implementation("com.google.firebase:firebase-analytics")
+
+    /*  When using the BoM, you don't specify versions in Firebase library dependencies. By using BoM, App will always use 
+        compatible versions of Firebase Android libraries  */
+
+    // Add the dependencies for Firebase products you want to use
+    // dependencies for Firebase Authentication and Cloud Firestore
+    implementation("com.google.firebase:firebase-auth")
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+
+// below config added for react native vector icons
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialCommunityIcons.ttf', 'FontAwesome.ttf' ] // Specify font files
+]
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")

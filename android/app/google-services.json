@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "260098991210",
+    "project_id": "qrcodescanner-c4aca",
+    "storage_bucket": "qrcodescanner-c4aca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260098991210:android:b3aa316176f110d3e6d613",
+        "android_client_info": {
+          "package_name": "com.qrcodescanner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6yZtMxZTXGjUPs6mPOHvUIFnn-h7DnoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
